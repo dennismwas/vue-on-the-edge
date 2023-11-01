@@ -184,26 +184,6 @@ main .block strong.na {
     font-size: min(8vw, 4rem);
   }
 
-  main h1 span {
-    max-width: none;
-  }
-
-  main .info {
-    display: flex;
-    justify-content: center;
-    top: 60vh;
-    gap: 4rem;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  main .block:nth-child(1) {
-    border-bottom: none;
-    justify-content: end;
-  }
-
-  main .block:nth-child(2) {
-    justify-content: start;
-  }
 }
 
 @media (prefers-color-scheme: dark) {
