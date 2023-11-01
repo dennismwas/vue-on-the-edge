@@ -132,7 +132,7 @@ main h1 span {
 main .info {
   --border-color: rgba(0, 0, 0, 0.08);
   position: absolute;
-  top:60vh;
+  top:55vh;
   bottom: 9rem;
   left:0;
   width: 100%;
