@@ -1,5 +1,5 @@
 import { createSSRApp, h } from 'vue'
-import PageShell from './PageShell.vue'
+import App from './App.vue'
 import { setPageContext } from './usePageContext'
 
 export { createApp }
@@ -8,7 +8,7 @@ function createApp(Page, pageProps, pageContext) {
   const PageWithLayout = {
     render() {
       return h(
-        PageShell,
+      App,
         {},
         {
           default() {
@@ -20,8 +20,6 @@ function createApp(Page, pageProps, pageContext) {
   }
 
   const app = createSSRApp(PageWithLayout)
-
-  // We make pageContext available from any Vue component
   setPageContext(app, pageContext)
 
   return app
