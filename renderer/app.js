@@ -4,11 +4,12 @@ import { setPageContext } from './usePageContext'
 
 export { createApp }
 
-function createApp(Page, pageProps, pageContext) {
+function createApp(pageContext) {
+  const { Page, pageProps } = pageContext
   const PageWithLayout = {
     render() {
       return h(
-      App,
+        App,
         {},
         {
           default() {
