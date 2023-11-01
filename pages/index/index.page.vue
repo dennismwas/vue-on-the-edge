@@ -190,6 +190,7 @@ main .block strong.na {
 
   main .info {
     display: flex;
+    flex-wrap:wrap;
     justify-content: center;
     top: 60vh;
     gap: 4rem;
