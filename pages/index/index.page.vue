@@ -133,6 +133,9 @@ main .info {
   --border-color: rgba(0, 0, 0, 0.08);
   position: absolute;
   bottom: 9rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   left: 0;
   width: 100%;
   display: grid;
@@ -182,18 +185,6 @@ main .block strong.na {
 @media (min-width: 640px) {
   main h1 {
     font-size: min(8vw, 4rem);
-  }
-
-  main h1 span {
-    max-width: none;
-  }
-
-  main .info {
-    display: flex;
-    justify-content: center;
-    top: 60vh;
-    gap: 4rem;
-    grid-template-columns: 1fr 1fr;
   }
 
   main .block:nth-child(1) {
