@@ -12,7 +12,7 @@ async function render(pageContext) {
 
   // See https://vike.dev/head
   const { documentProps } = pageContext
-  const title = documentProps?.title || 'Vuo on the edge'
+  const title = documentProps?.title || 'Vue on the edge'
   const desc = documentProps?.description || 'Vue on the edge'
 
   return escapeInject`<!DOCTYPE html>
