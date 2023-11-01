@@ -134,6 +134,8 @@ main .info {
   position: absolute;
   bottom: 9rem;
   left: 0;
+  display:flex;
+  flex-direction:column;
   width: 100%;
   display: grid;
   padding: 0 2.5rem;
