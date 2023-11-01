@@ -38,7 +38,7 @@
         </p>
         <a
           target="_blank"
-          href="https://github.com/pi0/nuxt-on-the-edge"
+          href="https://github.com/dennismwas/vue-on-the-edge"
           class="source"
         >
           <LogoGithub />
@@ -57,6 +57,8 @@ import { ref, computed } from 'vue'
 import { usePageContext } from '../../renderer/usePageContext';
 
 const pageContext = usePageContext();
+
+console.log(pageContext.headers);
 
 const generatedAt=computed(()=>new Date().toISOString())
 const parsedCity = ref(decodeURIComponent(pageContext.headers['x-vercel-ip-city']));
