@@ -135,10 +135,10 @@ main .info {
   bottom: 9rem;
   left: 0;
   width: 100%;
-  display: grid;
+  display: flex;
+  flex-direction:column;
   padding: 0 2.5rem;
   font-size: min(5vw, 2rem);
-  box-sizing: border-box;
 }
 
 main .block {
@@ -191,6 +191,7 @@ main .block strong.na {
   main .info {
     display: flex;
     justify-content: center;
+    flex-direction:row;
     top: 60vh;
     gap: 4rem;
     grid-template-columns: 1fr 1fr;
