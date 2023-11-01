@@ -179,7 +179,6 @@ main .block strong.na {
   color: #999;
 }
 
-@media (min-width: 640px) {
   main h1 {
     font-size: min(8vw, 4rem);
   }
@@ -203,7 +202,6 @@ main .block strong.na {
 
   main .block:nth-child(2) {
     justify-content: start;
-  }
 }
 
 @media (prefers-color-scheme: dark) {
