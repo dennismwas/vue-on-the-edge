@@ -1,0 +1,1 @@
+Vue3 running on the vercel edge network

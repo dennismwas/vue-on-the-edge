@@ -58,8 +58,6 @@ import { usePageContext } from '../../renderer/usePageContext';
 
 const pageContext = usePageContext();
 
-console.log(pageContext);
-
 const generatedAt=computed(()=>new Date().toISOString())
 const parsedCity = ref(decodeURIComponent(pageContext.headers['x-vercel-ip-city']));
 const city = computed(() => parsedCity.value === 'null' ? null : parsedCity.value);
