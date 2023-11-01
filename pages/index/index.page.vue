@@ -127,19 +127,6 @@ main h1 span {
   display: block;
   max-width: 6em;
   margin: 0 auto;
-}
-
-main .info {
-  --border-color: rgba(0, 0, 0, 0.08);
-  position: absolute;
-  bottom: 9rem;
-  left: 0;
-  width: 100%;
-  display: grid;
-  padding: 0 2.5rem;
-  font-size: min(5vw, 2rem);
-  box-sizing: border-box;
-}
 
 main .block {
   display: flex;
@@ -193,7 +180,6 @@ main .block strong.na {
     flex-wrap:wrap;
     justify-content: center;
     top: 60vh;
-    gap: 4rem;
     grid-template-columns: 1fr 1fr;
   }
 
