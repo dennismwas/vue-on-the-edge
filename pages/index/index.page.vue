@@ -191,7 +191,6 @@ main .block strong.na {
   main .info {
     display: flex;
     justify-content: center;
-    position: relative;
     top: 60vh;
     gap: 4rem;
     grid-template-columns: 1fr 1fr;
