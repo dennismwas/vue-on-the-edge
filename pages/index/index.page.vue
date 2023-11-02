@@ -131,15 +131,15 @@ main h1 span {
 
 main .info {
   --border-color: rgba(0, 0, 0, 0.08);
-  position: absolute;
-  top:55vh;
   bottom: 9rem;
-  left:0;
+  left: 0;
+  display:block;
+  position:absolute;
+  top: 60vh;
   width: 100%;
-  display: flex;
-  flex-direction:column;
   padding: 0 2.5rem;
   font-size: min(5vw, 2rem);
+  box-sizing: border-box;
 }
 
 main .block {
@@ -192,7 +192,7 @@ main .block strong.na {
   main .info {
     display: flex;
     justify-content: center;
-    flex-direction:row;
+    position: relative;
     top: 60vh;
     gap: 4rem;
     grid-template-columns: 1fr 1fr;
@@ -299,19 +299,19 @@ svg.card {
   animation: grow 5s linear both infinite;
 }
 
-.card .orbits>g {
+.card .orbits > g {
   animation: spin 60s linear both infinite;
 }
 
-.card .orbits>g:nth-child(2) {
+.card .orbits > g:nth-child(2) {
   animation-duration: 80s;
 }
 
-.card .orbits>g:nth-child(3) {
+.card .orbits > g:nth-child(3) {
   animation-duration: 100s;
 }
 
-.card .orbits>g:nth-child(4) {
+.card .orbits > g:nth-child(4) {
   animation-duration: 120s;
 }
 
@@ -325,15 +325,15 @@ svg.card {
 }
 
 @media (min-width: 800px) {
-  .card .orbits>g:nth-child(2) {
+  .card .orbits > g:nth-child(2) {
     animation-duration: 120s;
   }
 
-  .card .orbits>g:nth-child(3) {
+  .card .orbits > g:nth-child(3) {
     animation-duration: 150s;
   }
 
-  .card .orbits>g:nth-child(4) {
+  .card .orbits > g:nth-child(4) {
     animation-duration: 180s;
   }
 }
@@ -350,10 +350,9 @@ svg.card {
 }
 
 @media (prefers-reduced-motion) {
-
   .card .satellite,
   .card .orbit,
-  .card .orbits>g {
+  .card .orbits > g {
     animation: none;
   }
 }
@@ -441,4 +440,5 @@ footer .company a {
     grid-column: 1/3;
   }
 }
+
 </style>
