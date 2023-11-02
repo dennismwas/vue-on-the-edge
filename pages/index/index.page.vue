@@ -32,9 +32,9 @@
         </p>
         <p class="details">
           Built with
-          <a to="https://vuejs.org" target="_blank">Vue</a>
+          <a href="https://vuejs.org" target="_blank">Vue</a>
           on
-          <a to="https://vercel.com" target="_blank">Vercel</a>
+          <a href="https://vercel.com" target="_blank">Vercel</a>
         </p>
         <a
           target="_blank"
