@@ -1,6 +1,3 @@
-// `usePageContext` allows us to access `pageContext` in any Vue component.
-// See https://vike.dev/pageContext-anywhere
-
 import { inject } from 'vue'
 
 export { usePageContext }

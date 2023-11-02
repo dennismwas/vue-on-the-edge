@@ -1,5 +1,3 @@
-export { render }
-export const passToClient = ['pageProps', 'headers', 'urlPathname']
 import { renderToString } from '@vue/server-renderer'
 import { escapeInject, dangerouslySkipEscape } from 'vike/server'
 import { createApp } from './app'
@@ -36,3 +34,6 @@ async function render(pageContext) {
       </body>
     </html>`
 }
+
+export { render }
+export const passToClient = ['pageProps', 'headers', 'urlPathname']
