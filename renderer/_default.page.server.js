@@ -1,5 +1,4 @@
 export { render }
-// See https://vike.dev/data-fetching
 export const passToClient = ['pageProps', 'headers', 'urlPathname']
 import { renderToString } from '@vue/server-renderer'
 import { escapeInject, dangerouslySkipEscape } from 'vike/server'
@@ -11,7 +10,6 @@ async function render(pageContext) {
   const app = createApp(pageContext)
   const appHtml = await renderToString(app)
 
-  // See https://vike.dev/head
   const { documentProps } = pageContext
   const title = documentProps?.title || 'Vue on the edge'
   const desc = documentProps?.description || 'Vue on the edge'
