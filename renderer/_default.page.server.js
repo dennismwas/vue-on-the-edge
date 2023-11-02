@@ -30,6 +30,7 @@ async function render(pageContext) {
           <meta name="twitter:description" content="HTML, dynamically rendered in a city near you" />
           <meta name="twitter:image" content="${card}" />
           <meta name="twitter:image:alt" content="The Vercel and Vuejs logos" />
+          <meta name="og:image" content="${card}" />
         <title>${title}</title>
       </head>
       <body>
