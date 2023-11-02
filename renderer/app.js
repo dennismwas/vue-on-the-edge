@@ -20,7 +20,6 @@ function createApp(pageContext) {
 
   const app = createSSRApp(PageWithLayout)
   setPageContext(app, pageContext)
-
   return app
 }
 
