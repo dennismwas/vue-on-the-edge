@@ -53,7 +53,6 @@ import Card from './components/Card.vue';
 import LogoVercel from './components/LogoVercel.vue';
 import LogoGithub from './components/LogoGithub.vue';
 import { usePageContext } from '../../renderer/usePageContext';
-import './styles.css'
 const pageContext = usePageContext();
 
 const parsedCity = ()=>decodeURIComponent(pageContext.headers['x-vercel-ip-city']);

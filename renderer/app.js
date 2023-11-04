@@ -1,5 +1,6 @@
 import { createSSRApp, h } from 'vue'
 import App from './App.vue'
+import './styles.css'
 import { setPageContext } from './usePageContext'
 
 function createApp(pageContext) {
