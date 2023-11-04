@@ -10,6 +10,7 @@ const isProduction = process.env.NODE_ENV === 'production'
 
 startServer()
 
+
 async function startServer() {
   const app = express()
 
@@ -23,7 +24,15 @@ async function startServer() {
     const viteDevMiddleware = (
       await vite.createServer({
         root,
-        server: { middlewareMode: 'ssr' }
+        build: {
+          rollupOptions: {
+            output: {
+              manualChunks:{}
+            }
+          }
+        },
+        optimizeDeps:{exclude:['vue']},
+        server: { middlewareMode: 'html' }
       })
     ).middlewares
     app.use(viteDevMiddleware)
