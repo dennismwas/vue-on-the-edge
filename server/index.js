@@ -2,7 +2,12 @@
 import express from 'express'
 import compression from 'compression'
 import { renderPage } from 'vike/server'
-import { root } from './root.js'
+import { dirname } from 'path'
+import { fileURLToPath } from 'url'
+
+const __dirname = dirname(fileURLToPath(import.meta.url))
+const root = `${__dirname}/..`
+
 const isProduction = process.env.NODE_ENV === 'production'
 
 startServer()
