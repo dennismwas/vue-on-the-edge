@@ -35,4 +35,4 @@ async function render(pageContext) {
 
 export { render }
 
-export const passToClient = ['headers']
+export const passToClient = ['headers','pageProps']

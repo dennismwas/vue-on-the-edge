@@ -4,10 +4,8 @@ import compression from 'compression'
 import { renderPage } from 'vike/server'
 import { dirname } from 'path'
 import { fileURLToPath } from 'url'
-
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = `${__dirname}/..`
-
 const isProduction = process.env.NODE_ENV === 'production'
 
 startServer()
@@ -25,7 +23,7 @@ async function startServer() {
     const viteDevMiddleware = (
       await vite.createServer({
         root,
-        server: { middlewareMode: true }
+        server: { middlewareMode: 'ssr' }
       })
     ).middlewares
     app.use(viteDevMiddleware)
