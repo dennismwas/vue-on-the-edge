@@ -56,7 +56,7 @@ import { usePageContext } from '../../renderer/usePageContext';
 const pageContext = usePageContext();
 
 const parsedCity = ()=>decodeURIComponent(pageContext.headers['x-vercel-ip-city']);
-const city = () => parsedCity() === null ? "Cannot get city." : parsedCity();
+const city = () => !parsedCity() ? "Cannot get city." : parsedCity();
 const ip = ()=> (pageContext.headers['x-forwarded-for'] ?? '127.0.0.1').split(',')[0];
 
 </script>
