@@ -32,7 +32,7 @@ async function startServer() {
           }
         },
         optimizeDeps:{exclude:['vue']},
-        server: { middlewareMode: 'html' }
+        server: { middlewareMode: true }
       })
     ).middlewares
     app.use(viteDevMiddleware)
