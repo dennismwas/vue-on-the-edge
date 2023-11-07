@@ -33,8 +33,8 @@
         <p class="details">
           Built with
           <a href="https://vuejs.org" target="_blank">Vue</a>
-          on
-          <a href="https://vercel.com" target="_blank">Vercel</a>
+          using
+          <a href="https://vite-plugin-ssr.com/" target="_blank">Vite SSR (Vike)</a>
         </p>
         <a
           target="_blank"
