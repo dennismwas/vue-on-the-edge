@@ -23,7 +23,8 @@
         </div>
       </div>
     </main>
-       <div class="debug">Generated at {{ pageContext.dateString }}</div>
+       <div class="debug">Generated at {{ pageContext.dateString
+        }}</div>
          <footer>
         <p class="company">
           <a target="_blank" href="https://vercel.com" aria-label="Vercel">

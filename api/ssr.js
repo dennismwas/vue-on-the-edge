@@ -1,11 +1,11 @@
 import { renderPage } from 'vike/server'
 
 export default async function handler(req, res) {
-    const { url } = req
+    const { url,pageProps } = req
     if (url === undefined) throw new Error('req.url is undefined')
     const dateString = new Date().toISOString();
 
-    const pageContextInit = { pageProps:req.pageProps, urlOriginal: url, headers: req.headers,dateString }
+    const pageContextInit = { pageProps, urlOriginal: url, headers: req.headers,dateString }
     const pageContext = await renderPage(pageContextInit)
     const { httpResponse } = pageContext
 
