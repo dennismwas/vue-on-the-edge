@@ -8,7 +8,7 @@
           <div class="contents">
             <span>Your city</span>
             <strong>
-              {{ pageContext.city }}
+              {{ pageContext.city  }}
             </strong>
           </div>
         </div>
@@ -20,8 +20,7 @@
         </div>
       </div>
     </main>
-       <div class="debug">Generated at {{ pageContext.dateString
-        }}</div>
+       <div class="debug">Generated at {{ pageContext.dateString}}</div>
          <footer>
         <p class="company">
           <a target="_blank" href="https://vercel.com" aria-label="Vercel">
@@ -51,5 +50,6 @@ import Card from './components/Card.vue';
 import LogoVercel from './components/LogoVercel.vue';
 import LogoGithub from './components/LogoGithub.vue';
 import { usePageContext } from '../../renderer/usePageContext';
+import './styles.css'
 const pageContext = usePageContext();
 </script>

@@ -5,6 +5,7 @@ import card from './card.png'
 import { renderToString } from '@vue/server-renderer'
 
 
+
 async function render(pageContext) {
   const app = createApp(pageContext)
   const appHtml = await renderToString(app)
