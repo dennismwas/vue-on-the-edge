@@ -40,9 +40,11 @@ async function startServer() {
 
 
   app.get('*', async (req, res, next) => {
+    const dateString = new Date().toISOString();
     const pageContextInit = {
       urlOriginal: req.originalUrl,
-      headers:req.headers,
+      headers: req.headers,
+      dateString
     }
     const pageContext = await renderPage(pageContextInit)
     const { httpResponse } = pageContext
