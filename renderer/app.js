@@ -3,7 +3,7 @@ import App from './App.vue'
 import { setPageContext } from './usePageContext'
 
 function createApp(pageContext) {
-  const { Page,pageProps } = pageContext
+  const { Page} = pageContext
   const PageWithLayout = {
     render() {
       return h(
@@ -11,7 +11,7 @@ function createApp(pageContext) {
         {},
         {
           default() {
-            return h(Page,pageProps || {})
+            return h(Page|| {})
           }
         }
       )

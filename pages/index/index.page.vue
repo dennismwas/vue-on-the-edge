@@ -7,18 +7,15 @@
         <div class="block">
           <div class="contents">
             <span>Your city</span>
-            <strong :title="city() === null || '-'
-              ? 'GeoIP information could not be derived from your IP'
-              : null
-              ">
-              {{ city() }}
+            <strong>
+              {{ pageContext.city }}
             </strong>
           </div>
         </div>
         <div class="block">
           <div class="contents">
             <span>Your IP address</span>
-            <strong>{{ ip() }}</strong>
+            <strong>{{ pageContext.ip }}</strong>
           </div>
         </div>
       </div>
@@ -55,9 +52,4 @@ import LogoVercel from './components/LogoVercel.vue';
 import LogoGithub from './components/LogoGithub.vue';
 import { usePageContext } from '../../renderer/usePageContext';
 const pageContext = usePageContext();
-
-const parsedCity = ()=>decodeURIComponent(pageContext.headers['x-vercel-ip-city']);
-const city = () =>  parsedCity()=='undefined' ? "Cannot get city":parsedCity();
-const ip = ()=> (pageContext.headers['x-forwarded-for'] ?? '127.0.0.1').split(',')[0];
-
 </script>

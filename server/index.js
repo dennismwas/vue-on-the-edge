@@ -41,10 +41,16 @@ async function startServer() {
 
   app.get('*', async (req, res, next) => {
     const dateString = new Date().toISOString();
+    const parsedCity = decodeURIComponent(req.headers['x-vercel-ip-city']);
+    const ip = (req.headers['x-forwarded-for'] ?? '127.0.0.1').split(',')[0];
+    const city = parsedCity == 'undefined' ? "Cannot get city" : parsedCity;
+
     const pageContextInit = {
       urlOriginal: req.originalUrl,
-      headers: req.headers,
-      dateString
+      dateString,
+      ip,
+      city,
+      parsedCity
     }
     const pageContext = await renderPage(pageContextInit)
     const { httpResponse } = pageContext

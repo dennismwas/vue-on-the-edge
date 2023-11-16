@@ -1,11 +1,16 @@
 import { renderPage } from 'vike/server'
 
 export default async function handler(req, res) {
-    const { url,pageProps } = req
+    const { url } = req
     if (url === undefined) throw new Error('req.url is undefined')
-    const dateString = new Date().toISOString();
 
-    const pageContextInit = { pageProps, urlOriginal: url, headers: req.headers,dateString }
+
+    const dateString = new Date().toISOString();
+    const parsedCity = decodeURIComponent(req.headers['x-vercel-ip-city']);
+    const ip = (req.headers['x-forwarded-for'] ?? '127.0.0.1').split(',')[0];
+    const city = parsedCity == 'undefined' ? "Cannot get city" : parsedCity;
+    
+    const pageContextInit = { parsedCity, ip, city, urlOriginal: url, dateString }
     const pageContext = await renderPage(pageContextInit)
     const { httpResponse } = pageContext
 
