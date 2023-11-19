@@ -6,6 +6,8 @@ export const config = {
 
 export default async function handler(request) {
     const { url } = request
+
+    console.log(request);
     if (url === undefined) throw new Error('req.url is undefined')
 
 
@@ -19,7 +21,7 @@ export default async function handler(request) {
     const { httpResponse } = pageContext
 
     const { body, statusCode, contentType } = httpResponse
-    
+
     return new Response(body, {
         headers: { 'Content-Type': contentType }
     })
