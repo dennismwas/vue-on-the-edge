@@ -31,7 +31,6 @@ async function startServer() {
             }
           }
         },
-        optimizeDeps:{exclude:['vue']},
         server: { middlewareMode: true }
       })
     ).middlewares

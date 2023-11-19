@@ -6,9 +6,14 @@ import { renderToString } from '@vue/server-renderer'
 
 
 
+function removeScriptTags(html) {
+  return html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
+}
+
 async function render(pageContext) {
   const app = createApp(pageContext)
-  const appHtml = await renderToString(app)
+  const appHtml = await renderToString(app);
+  
 
   return escapeInject`<!DOCTYPE html>
 <html lang="en">
@@ -36,4 +41,4 @@ async function render(pageContext) {
 
 export { render }
 
-export const passToClient = ['ip','city','parsedCity','dateString']
+export const passToClient = ['ip', 'city', 'parsedCity', 'dateString']
