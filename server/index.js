@@ -44,9 +44,12 @@ async function startServer() {
     const ip = (req.headers['x-forwarded-for'] ?? '127.0.0.1').split(',')[0];
     const city = parsedCity == 'undefined' ? "Cannot get city" : parsedCity;
 
+    console.log(req.path)
+
     const pageContextInit = {
       urlOriginal: req.originalUrl,
       dateString,
+      path:req.path,
       ip,
       city,
       parsedCity

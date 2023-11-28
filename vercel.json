@@ -1,8 +1,20 @@
 {
-    "rewrites": [
+    "redirects":[
         {
-            "source": "/((?!assets/).*)",
-            "destination": "/api/ssr.js"
+            "source": "/",
+            "destination": "/edge"
+        }
+
+    ],
+    "rewrites": [
+     
+        {
+            "source": "/edge((?!assets/).*)",
+            "destination": "/api/edge.js"
+        },
+        {
+            "source": "/node((?!assets/).*)",
+            "destination": "/api/node.js"
         }
     ]
 }

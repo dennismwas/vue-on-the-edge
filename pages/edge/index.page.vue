@@ -2,6 +2,7 @@
   <div>
     <Card />
     <main>
+      <NavBar :url="pageContext.urlOriginal" />
       <h1>Hello from the edge!</h1>
       <div class="info">
         <div class="block">
@@ -42,10 +43,12 @@
 </template>
 
 <script setup>
-import Card from './components/Card.vue';
-import LogoVercel from './components/LogoVercel.vue';
-import LogoGithub from './components/LogoGithub.vue';
+import NavBar from '../components/NavBar.vue';
+import Card from '../components/Card.vue';
+import LogoVercel from '../components/LogoVercel.vue';
+import LogoGithub from '../components/LogoGithub.vue';
 import { usePageContext } from '../../renderer/usePageContext';
-import './styles.css'
+import '../styles.css'
+
 const pageContext = usePageContext();
 </script>
