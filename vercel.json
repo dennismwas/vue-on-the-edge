@@ -1,8 +1,16 @@
 {
     "rewrites": [
         {
-            "source": "/((?!assets/).*)",
-            "destination": "/api/ssr.js"
+            "source": "/",
+            "destination": "/edge"
+        },
+        {
+            "source": "/edge((?!assets/).*)",
+            "destination": "/api/edge.js"
+        },
+        {
+            "source": "/node((?!assets/).*)",
+            "destination": "/api/node.js"
         }
     ]
 }

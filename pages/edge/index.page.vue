@@ -2,6 +2,11 @@
   <div>
     <Card />
     <main>
+      <nav>
+        <a :aria-current="pageContext.path == '/edge' ? 'true' : undefined" href="/edge">edge</a>
+        /
+        <a :aria-current="pageContext.path == '/node' ? 'true' : undefined" href="/node">node</a>
+      </nav>
       <h1>Hello from the edge!</h1>
       <div class="info">
         <div class="block">
@@ -42,10 +47,11 @@
 </template>
 
 <script setup>
-import Card from './components/Card.vue';
-import LogoVercel from './components/LogoVercel.vue';
-import LogoGithub from './components/LogoGithub.vue';
+import Card from '../components/Card.vue';
+import LogoVercel from '../components/LogoVercel.vue';
+import LogoGithub from '../components/LogoGithub.vue';
 import { usePageContext } from '../../renderer/usePageContext';
-import './styles.css'
+import '../styles.css'
+
 const pageContext = usePageContext();
 </script>
