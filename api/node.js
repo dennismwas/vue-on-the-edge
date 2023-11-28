@@ -2,7 +2,7 @@ import { renderPage } from 'vike/server'
 
 
 export default async function handler(request, response) {
-    console.log(request.path);
+    console.log(request);
     const { url } = request
     if (url === undefined) throw new Error('req.url is undefined')
 

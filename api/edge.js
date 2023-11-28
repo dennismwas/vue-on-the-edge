@@ -5,9 +5,8 @@ export const config = {
 };
 
 export default async function handler(request) {
-    const { url } = request
-    const hostUrl = new URL(request.url);
-    console.log(hostUrl);
+    const { url } = request;
+    console.log(hostUrl.url);
     if (url === undefined) throw new Error('req.url is undefined')
 
 
