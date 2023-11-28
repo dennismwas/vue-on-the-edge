@@ -1,7 +1,8 @@
 import { renderPage } from 'vike/server'
 
 
-export default async function handler(request,response) {
+export default async function handler(request, response) {
+    console.log(request.headers);
     const { url } = request
     if (url === undefined) throw new Error('req.url is undefined')
 
@@ -18,8 +19,8 @@ export default async function handler(request,response) {
     const { httpResponse } = pageContext
     const { body, statusCode, headers } = httpResponse
 
-    return new Response(body, {
-        status: statusCode,
-        headers: headers
-    })
+    response.statusCode = statusCode
+    response.headers = headers;
+    response.end(body)
+
 }
