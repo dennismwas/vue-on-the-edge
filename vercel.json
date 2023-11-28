@@ -1,9 +1,13 @@
 {
-    "rewrites": [
+    "redirects":[
         {
             "source": "/",
             "destination": "/edge"
-        },
+        }
+
+    ],
+    "rewrites": [
+     
         {
             "source": "/edge((?!assets/).*)",
             "destination": "/api/edge.js"
