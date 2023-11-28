@@ -1,8 +1,5 @@
 import { renderPage } from 'vike/server'
 
-export const config = {
-    runtime: 'nodejs20.x',
-};
 
 export default async function handler(request) {
     const { url } = request
