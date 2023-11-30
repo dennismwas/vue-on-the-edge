@@ -49,7 +49,6 @@ async function startServer() {
     const pageContextInit = {
       urlOriginal: req.originalUrl,
       dateString,
-      path:req.path,
       ip,
       city,
       parsedCity
