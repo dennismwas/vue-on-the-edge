@@ -41,4 +41,4 @@ async function render(pageContext) {
 
 export { render }
 
-export const passToClient = ['ip','path', 'city','urlOriginal', 'parsedCity', 'dateString']
+export const passToClient = ['ip', 'city','urlOriginal', 'parsedCity', 'dateString']

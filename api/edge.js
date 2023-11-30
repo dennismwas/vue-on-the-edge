@@ -14,7 +14,7 @@ export default async function handler(request) {
     const ip = (request.headers.get('x-forwarded-for') ?? '127.0.0.1').split(',')[0];
     const city = parsedCity == 'undefined' ? "Cannot get city" : parsedCity;
 
-    const pageContextInit = { parsedCity, ip, path:request.path, city, urlOriginal: new URL(url).pathname, dateString }
+    const pageContextInit = { parsedCity, ip, city, urlOriginal: new URL(url).pathname, dateString }
 
     const pageContext = await renderPage(pageContextInit);
 
