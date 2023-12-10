@@ -140,7 +140,7 @@ main .block strong.na {
   color: #999;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   main h1 {
     font-size: min(8vw, 4rem);
   }
